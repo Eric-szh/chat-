@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  	<title>留言板</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="./client/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="./client/code.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+</head>
+
+<body>
+	
+	<div class="d-flex flex-column justify-content-center" style="height: 100% " id="register" style="z-index: -1;">
+	<form action="login" id="login" onSubmit="login(); return false;" style="position: relative;bottom: 10%; display: none;">
+		<p id="tips" class="text-light text-center m-2 lead">请输入你的昵称：</p>
+		<div class="d-flex flex-row">
+		<input type="text" autofocus="true" id="nickname" class="form-control m-2" placeholder="你的昵称" >
+		</div>
+		<div class="d-flex flex-row">
+		<button type="submit" class="btn btn-primary btn-block m-2">提交</button>
+		</div>
+	</form>
+	</div>
+	<div id="layer" style="display: none;"></div>
+	
+ 	
+ 	<div class="d-flex flex-column" style="height: 100%">
+	<div class="card mt-2 ml-2 mr-2" style="height: 95%">
+  		<div class="card-header lead" id="nameGreet">你好</div>
+  		<div class="card-body" id="disWindow" style="padding: 0.75rem; overflow: scroll;"></div>
+	</div>
+
+	<div class="d-flex flex-row">
+	<button type="button" class="btn-lg btn-primary  btn-block m-2 " data-toggle="modal" style="" data-target="#Modal">我要留言</button>
+	
+	</div>
+ 	</div>
+	<div class="modal fade" id="Modal"  tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+	<div class="modal-dialog" id="modal-dialog" role="document" style="height: 50%">
+	    <div class="modal-content" style="height: 100%" id="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">留言</h5>
+	        <button type="button"  class="close" aria-label="Close" data-dismiss="modal">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body" id="modal-body" style="height: 10px;">
+	        <div contenteditable="true" id="text"  class="form-control" style="overflow: scroll;">在这里写下你的话吧</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="send" class="btn btn-primary btn-block" >提交</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+</body>
+
+</html>

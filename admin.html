@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>客服端</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="./admin/css.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="./admin/js.js"></script>
+</head>
+<body>
+	
+
+
+
+
+
+<div class="row" style="height: 100%">
+	<div class="col-sm-4" >
+		<div class="card" style="padding: 5px; height: 100%; overflow: scroll;" >
+		<div class="list-group rounded-0" id="list" ></div>
+		</div>
+	</div>
+	<div class="col-sm-8"  >
+		<div class="d-flex flex-column" style="height: 100%;">
+			<div class="card" style="height: 100%;">
+				<div class="card-header" id="header">用户名</div>
+				<div class="card-body" style="padding: 5px; overflow: scroll;" id="disWindow"  ></div>
+			</div>
+		
+			<div class="input-group" style="bottom: 0; margin-top: 5px;">
+				<input type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="basic-addon2" id="input"> 
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="send">发送</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

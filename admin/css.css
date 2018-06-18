@@ -1,0 +1,27 @@
+html,body
+	{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+	}	
+
+.cards{
+	height: 100%;
+	padding: 5px;
+	display: inline;
+	margin: 0px;
+}
+
+#list{
+	width: 100%;
+	border-radius: 0px;
+}
+
+.message{
+	padding: 0.5rem;
+	max-width: 100%; 
+	margin:0.3rem;
+}
+
+

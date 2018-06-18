@@ -1,0 +1,8 @@
+{
+  "name": "CTB-project",
+  "version": "0.0.1",
+  "description": "a stupid task",
+  "dependencies": {
+    "express": "^4.10.2"
+  }
+}
